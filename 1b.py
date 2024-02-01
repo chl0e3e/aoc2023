@@ -56,10 +56,8 @@ with open("1.input.txt") as input_file:
 
         line_numbers = strip_alphabetical(line)
         
-        a.write(line_numbers +"\n")
         line_first_and_last_numbers = first_and_last_chars(line_numbers)
         
-        a.write(line_first_and_last_numbers +"\n")
         total += int(line_first_and_last_numbers)
 
 print("Total: %d" % total)
