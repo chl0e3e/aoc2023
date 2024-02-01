@@ -21,11 +21,10 @@ english_numbers = {
     "eight": "8",
     "nine": "9"
 }
-a = open("test.txt", "w")
+
 def replace_lingual_numbers(data):
     ptr = 0
-    print(data)
-    a.write(data +"\n")
+
     while ptr != len(data):
         ptr_step = 1
 
@@ -42,8 +41,7 @@ def replace_lingual_numbers(data):
                 break
 
         ptr += ptr_step
-    print(data)
-    a.write(data +"\n")
+
     return data
 
 
@@ -63,8 +61,5 @@ with open("1.input.txt") as input_file:
         
         a.write(line_first_and_last_numbers +"\n")
         total += int(line_first_and_last_numbers)
-
-a.close()
-
 
 print("Total: %d" % total)
