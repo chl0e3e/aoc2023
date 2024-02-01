@@ -23,27 +23,9 @@ english_numbers = {
 }
 
 def replace_lingual_numbers(data):
-    ptr = 0
-
-    while ptr != len(data):
-        ptr_step = 1
-
-        for number_word in english_numbers.keys():
-            ptr_end = ptr + len(number_word)
-            
-            if ptr_end > len(data):
-                continue
-
-            if data[ptr:ptr_end] == number_word:
-                number = english_numbers[number_word]
-                data = data[:ptr] + number + data[ptr_end:]
-                ptr_step = len(number)
-                break
-
-        ptr += ptr_step
-
+    for number_word, number in english_numbers.items():
+        data = data.replace(number_word, number)
     return data
-
 
 total = 0
 
